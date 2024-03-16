@@ -12,9 +12,9 @@ const GameBoard = () => {
   const handleSelectSquare = (rowIndex, colIndex) => {
     setGameboard((prevGameBoard) => {
        //faccio una copia
-      const updatedGameBoard = [...prevGameBoard.map[(innerArray) =>  [...innerArray]]];
-
-        // la modifico e setto il valore
+      const updatedGameBoard = [...prevGameBoard.map((innerArray) =>  [...innerArray])];
+      updatedGameBoard[rowIndex][colIndex] = 'X';
+      return updatedGameBoard; 
     })
   }
   return (
@@ -24,7 +24,7 @@ const GameBoard = () => {
             <ol>
               {row.map((playerSymbol, colIndex) => (
                 <li key={colIndex}>
-                  <button onClick={() =>handleSelectSquare()}>
+                  <button onClick={() =>handleSelectSquare(rowIndex, colIndex)}>
                     {playerSymbol}
                   </button>
                 </li>
