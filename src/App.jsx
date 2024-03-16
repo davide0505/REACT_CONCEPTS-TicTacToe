@@ -12,7 +12,6 @@ function App() {
           <Player initialName='Player 1' symbol='0'/>
         </ol>
        <GameBoard/>
-
       </div>
       LOG
     </main>
