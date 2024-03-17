@@ -4,7 +4,7 @@ import Player from "./components/Player"
 import Log from "./components/Log"
 
 function App() {
-  const[gameTurns, setGameTurns]  = useState([]);
+  const [gameTurns, setGameTurns]  = useState([]);
   const [activePlayer, setActivePlayer] = useState('X')
 
   const handleSelectSquare = (rowIndex, colIndex) => {
@@ -31,7 +31,7 @@ function App() {
         </ol>
        <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns}/>
       </div>
-      <Log/>
+      <Log turns={gameTurns}/>
     </main>
   )
 }
